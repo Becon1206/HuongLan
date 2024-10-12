@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="post.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="icon">
+            <i class="bx bx-code-block"></i>
+            <h2 onclick="reloadPage()">Studify</h2>
+        </div>
+        <nav id="nav1">
+            <a href="#" id="home-tab" class="tab-link active">Home</a>
+            <a href="#" id="exercise-tab" class="tab-link">Exercise</a>
+            <a href="#" id="about-tab" class="tab-link">About</a>
+        </nav>
+        <a href="#" id="login-link">Login</a>
+    </header>
+
+    <!-- Dark overlay background -->
+    <div id="overlay"></div>
+    <div id="login-container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form action="/dashboard" method="post">
+                <div class="input-group">
+                    <label for="username">Username/Email: </label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tab content sections -->
+    <div id="home" class="tab-content active">
+        <div id="content">
+            <h1>Welcome to Studify!</h1>
+            <p>"Ready to become a coding wizard? Join us and unleash your creativity as you build amazing projects and
+                master the art of programming!"</p>
+        </div>
+    </div>
+
+
+
+    <div id="exercise" class="tab-content">
+
+        <div class="exercise-container">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>Exercises</h3>
+                <ul>
+                    <a href="#" class="ex-tab">Exercise 1</a>
+                    <a href="#" class="ex-tab">Exercise 2</a>
+                    <a href="#" class="ex-tab">Exercise 3</a>
+                    <a href="#" class="ex-tab">Exercise 4</a>
+                </ul>
+            </div>
+
+            <!-- Main Exercise Content -->
+
+            <div class="exercise">
+                <h3>Merge Two Sorted Lists</h3>
+                <p>Topics: Linked List, Recursion</p>
+                <p>Time: 20 minutes</p>
+                <p>Difficulty level: Easy</p>
+                <button class="start-btn">Start</button>
+            </div>
+
+            <div class="exercise">
+                <h3>Search in Rotated Sorted Array</h3>
+                <p>Topics: Array, Binary Search</p>
+                <p>Time: 30 minutes</p>
+                <p>Difficulty level: Medium</p>
+                <button class="start-btn">Start</button>
+            </div>
+
+            <div class="exercise">
+                <h3>Word Ladder</h3>
+                <p>Topics: Hash Table, String, Breadth-First Search</p>
+                <p>Time: 45 minutes</p>
+                <p>Difficulty level: Hard</p>
+                <button class="start-btn">Start</button>
+            </div>
+
+            <div class="exercise">
+                <h3>Trapping Rain Water</h3>
+                <p>Topics: Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack</p>
+                <p>Time: 35 minutes</p>
+                <p>Difficulty level: Hard</p>
+                <button class="start-btn">Start</button>
+            </div>
+
+
+            <div class="input-area">
+                <textarea></textarea>
+                <button id="submitBtn">Submit</button>
+            </div>
+
+            <div class="submit-answer">
+                <button id="close-ans">&times;</button>
+                <h3>Score</h3>
+                <ul>
+                    <li>Test 1: <span>✔ Pass</span></li>
+                    <li>Test 2: <span>✔ Pass</span></li>
+                    <li>Test 3: <span>✖ Fail</span></li>
+                    <li>Test 4: <span>✔ Pass</span></li>
+                    <li>Test 5: <span>✔ Pass</span></li>
+                    <li>Test 6: <span>✖ Fail</span></li>
+                    <li>Test 7: <span>✔ Pass</span></li>
+                    <li>Test 8: <span>✔ Pass</span></li>
+                    <li>Test 9: <span>✔ Pass</span></li>
+                    <li>Test 10: <span>✔ Pass</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="about" class="tab-content">
+        <section>
+            <h2></h2>
+            <p>Chào mừng bạn đến với Studify, nơi cung cấp môi trường học lập trình trực tuyến thân thiện và hiệu quả
+                nhất!
+            <p>Sứ mệnh của chúng tôi là giúp mọi người, từ người mới bắt đầu đến lập trình viên chuyên nghiệp,
+                tiếp cận kiến thức lập trình một cách dễ dàng và hấp dẫn.</p>
+
+            <Tại>Tại Studify, chúng tôi hiểu rằng việc học lập trình không chỉ là hiểu ngôn ngữ code mà còn là cách giải
+                quyết vấn đề, xây dựng tư duy logic và thực hành liên tục. Chính vì vậy, chúng tôi thiết kế các khóa học
+                và bài tập tương tác dựa trên nguyên tắc:</p>
+
+                <p>Dễ hiểu: Các bài giảng được trình bày rõ ràng, dễ tiếp cận, phù hợp với mọi cấp độ.
+                <p>Thực hành: Học đi đôi với hành, bạn sẽ được làm quen với các bài tập thực tiễn ngay từ những bước
+                    đầu tiên.</p>
+                <p>Cộng đồng: Kết nối với những người học khác, chia sẻ kinh nghiệm và giải đáp thắc mắc.</p>
+        </section>
+
+    </div>
+
+
+
+
+
+</body>
+<script src="main.js" defer></script>
+
+</html>

@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #F0F4F8;
+    color: black;
+}
+
+header {
+    background-color: #81C784;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+#icon {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#icon h2 {
+    margin-left: 10px;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav a:hover {
+    background-color: #66BB6A;
+    border-radius: 5px;
+}
+
+header a {
+    color: #f0f0f0;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Hiding all tab content sections by default */
+.tab-content {
+    display: none;
+}
+
+/* Show active tab content */
+.tab-content.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Adjust styles for better visibility */
+header nav a.active {
+    background-color: #79AC78;
+    border-radius: 5px;
+}
+
+#login-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    z-index: 1000;
+    width: 400px;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #43A047;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4C6A92;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Background overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+#login-container.show {
+    display: block;
+}
+
+
+.filter-section {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.filter-section label {
+    margin-right: 10px;
+}
+
+.filter-section select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.exercise-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 10%;
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.sidebar ul a:hover,
+.sidebar ul a.active {
+    background-color: #d5d5d5a2;
+}
+
+/* Exercise list styling */
+.exercise {
+    display: none;
+
+}
+
+.exercise.active {
+    width: 20rem;
+    height: auto;
+    display: block;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.start-btn {
+    background-color: #8eff91;
+    width: 3rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    color: #333;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#home {
+    background-image: url('./bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1.5;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    padding: 200px;
+    text-align: center;
+
+}
+
+.input-area {
+    display: none;
+}
+
+.input-area.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.input-area textarea {
+    width: 35rem;
+    height: 25rem;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    font-size: 18px;
+    background-color: #f6fff9;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+#submitBtn {
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #8eff91;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.submit-answer {
+    position: fixed;
+    top: 25%;
+    /* Căn chỉnh khoảng cách từ navbar */
+    left: 50%;
+    transform: translate(-50%, -25%);
+    /* Căn giữa theo cả chiều ngang và dọc */
+    width: 50%;
+    /* Điều chỉnh chiều rộng để phù hợp với việc hiển thị tất cả các mục */
+    max-width: 600px;
+    /* Giới hạn chiều rộng tối đa */
+    background-color: #f0f0f5;
+    border-radius: 8px;
+    /* Giữ cho góc bo nhẹ nhàng */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+    /* Shadow nhẹ nhàng */
+    padding: 15px;
+    display: none;
+    /* Hidden by default */
+    z-index: 10;
+    height: auto;
+    /* Tự động điều chỉnh chiều cao dựa trên nội dung */
+    overflow: hidden;
+    /* Không cho cuộn */
+}
+
+.submit-answer.active {
+    display: block;
+}
+
+.submit-answer h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.submit-answer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submit-answer li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    /* Điều chỉnh khoảng cách giữa các mục */
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.submit-answer li:last-child {
+    border-bottom: none;
+}
+
+.submit-answer li span {
+    font-weight: bold;
+    color: #4CAF50;
+    /* Màu xanh cho các mục đạt */
+}
+
+/* Màu đỏ cho các mục không đạt */
+.submit-answer li:nth-child(3) span,
+.submit-answer li:nth-child(6) span {
+    color: #FF204E;
+}
+
+.submit-answer li:hover {
+    background-color: #f9f9f9;
+}
+
+/* Nút đóng */
+#close-ans {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+#close-ans:hover {
+    color: #333;
+}
+
+#about {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    position: relative;
+    padding-top: 80px;
+
+}
+
+#about section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
