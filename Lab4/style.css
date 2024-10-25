@@ -1,0 +1,375 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.navbar .nav-left,
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.nav-right i {
+    margin-right: 8px;
+    /* Space between icon and text */
+    color: #c1bfbf;
+    /* Color for icons */
+}
+
+.nav-left .separator {
+    color: #ccc;
+    margin-right: 15px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    padding: 10px;
+    max-width: max-content;
+    margin: 5px;
+}
+
+/* Video Section */
+.video-section {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 2;
+    margin: 0px;
+}
+
+.video-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    /* Optional: for rounded corners */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    /* Remove default border */
+}
+
+.video-section p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Course Details */
+.course-details {
+    margin-top: 20px;
+}
+
+.course-details h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-stats {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #555;
+}
+
+.course-stats span {
+    margin-right: 10px;
+}
+
+.languages {
+    font-size: 15px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Learning Points Container */
+.learning-points-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 0.5px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Learning Points */
+.learning-points-container h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.learning-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two-column layout */
+    gap: 10px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.learning-points li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Tick Icon Styling */
+.learning-points li::before {
+    content: '\2713';
+    /* Checkmark Unicode */
+    color: green;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Course Content */
+.course-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+}
+
+.course-content h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* Cursor changes to pointer to indicate clickable sections */
+}
+
+.section h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Content List */
+.content {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+    display: none;
+    /* Hidden by default */
+}
+
+.section.active .content {
+    display: block;
+    /* Show when active */
+}
+
+.section li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .video-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .course-content {
+        max-width: 100%;
+    }
+
+    .learning-points {
+        grid-template-columns: 1fr;
+        /* Single-column layout on mobile */
+    }
+}
+
+
+.tab-container {
+    margin-top: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.tab-button.active {
+    background-color: #ccc;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.course-content.mega-menu {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 15px;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+    /* Space between menu items */
+    cursor: pointer;
+    /* Indicate that these items are clickable */
+    position: relative;
+    /* For positioning child elements */
+}
+
+.menu-title {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Rounded corners */
+    background-color: #f9f9f9;
+    /* Light background */
+    transition: background-color 0.3s;
+    /* Smooth background change */
+}
+
+.menu-title:hover {
+    background-color: #e9e9e9;
+    /* Change background on hover */
+}
+
+.content {
+    display: none;
+    /* Hidden by default */
+    padding: 10px 15px;
+    /* Padding for the content */
+    border-left: 3px solid #0073aa;
+    /* Left border for visual distinction */
+    background-color: #f1f1f1;
+    /* Light gray background */
+    border-radius: 0 0 4px 4px;
+    /* Rounded bottom corners */
+}
+
+.content ul {
+    list-style-type: none;
+    /* Remove default bullet points */
+    padding-left: 0;
+    /* No left padding */
+    margin-top: 5px;
+    /* Space above the list */
+}
+
+.content li {
+    font-size: 14px;
+    /* Font size for list items */
+    color: #555;
+    /* Text color for list items */
+    margin-bottom: 5px;
+    /* Space between list items */
+}
+
+/* Mega Menu Specific Styles */
+.mega-menu {
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
+}
+
+.mega-menu .menu-item {
+    border-bottom: 1px solid #ddd;
+    /* Divider between menu items */
+}
+
+.mega-menu .menu-item:last-child {
+    border-bottom: none;
+    /* No border on the last item */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course-content.mega-menu {
+        padding: 15px;
+        /* Reduce padding on mobile */
+    }
+
+    .menu-title {
+        font-size: 14px;
+        /* Slightly smaller font on mobile */
+    }
+}
