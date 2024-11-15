@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Materials</title>
+    <link rel="stylesheet" href="css/h1.css">
+</head>
+
+<body>
+    <header>
+        <div id="name">
+            <h2 onclick="reloadPage()">Studify</h2>
+        </div>
+        <nav id="nav1">
+            <a href="#" id="home-tab" class="tab-link active">Home</a>
+            <a href="#" id="sign-tab" class="tab-link">Sign in</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Chia Sẻ Tài Liệu</h1>
+        <div class="materials-grid">
+            <div class="material" data-material="django">
+                <h2>Toán Rời Rạc</h2>
+                <button class="view-btn" onclick="showLesson('TRR')">View Materials</button>
+            </div>
+            <div class="material" data-material="fee">
+                <h2>Cấu Trúc Dữ Liệu</h2>
+                <button class="view-btn" onclick="showLesson('CTDL')">View Materials</button>
+            </div>
+            <div class="material" data-material="java-mock">
+                <h2>Giao tiếp Người Máy</h2>
+                <button class="view-btn" onclick="showLesson('GTNM')">View Materials</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-content" id="lesson-content" style="display: none;">
+        <h2>Nội dung bài học</h2>
+        <div class="lessons">
+            <ul id="lesson-list">
+                <li onclick="showTopic('TRR', 'lecture')">Bài giảng - Toán Rời Rạc</li>
+                <li onclick="showTopic('TRR', 'exercises')">Bài tập - Toán Rời Rạc</li>
+                <li onclick="showTopic('TRR', 'references')">Tài liệu tham khảo - Toán Rời Rạc</li>
+
+                <li onclick="showTopic('CTDL', 'lecture')">Bài giảng - Cấu Trúc Dữ Liệu</li>
+                <li onclick="showTopic('CTDL', 'exercises')">Bài tập - Cấu Trúc Dữ Liệu</li>
+                <li onclick="showTopic('CTDL', 'references')">Tài liệu tham khảo - Cấu Trúc Dữ Liệu</li>
+
+                <li onclick="showTopic('GTNM', 'lecture')">Bài giảng - Giao tiếp Người Máy</li>
+                <li onclick="showTopic('GTNM', 'exercises')">Bài tập - Giao tiếp Người Máy</li>
+                <li onclick="showTopic('GTNM', 'references')">Tài liệu tham khảo - Giao tiếp Người Máy</li>
+            </ul>
+        </div>
+
+        <div class="lesson-detail" id="TRR" style="display: none;">
+            <h3>Toán Rời Rạc</h3>
+            <div id="TRR-lecture" style="display: none;">
+                <p>Bài 1: Logic mệnh đề</p>
+                <embed src="\pdf\1.1 Co so Logic - Logic menh de_Update_HK1_2024-2025.pdf" type="application/pdf"
+                    width="1000" height="500">
+                <p>Bài 2: Logic vị từ</p>
+                <embed src="\pdf\1.2 Co so Logic - Logic vi tu_HK1_2024-2025.pdf" type="application/pdf" width="1000"
+                    height="500">
+                <p>Bài 3: Suy luận Logic</p>
+                <embed src="\pdf\1.3 Co so Logic - Suy luan logic_HK1_2024-2025.pdf" type="application/pdf" width="1000"
+                    height="500">
+            </div>
+            <div id="TRR-exercises" style="display: none;">
+                <p>Bài tập 1: Giải bài toán logic</p>
+                <embed src="\pdf\1.2 Co so Logic - Logic vi tu_HK1_2024-2025.pdf" type="application/pdf" width="1000"
+                    height="500">
+                <p>Bài tập 2: Tìm hiểu tập hợp</p>
+            </div>
+            <div id="TRR-references" style="display: none;">
+                <p>Tài liệu tham khảo: Sách Toán Rời Rạc của Richard Johnsonbaugh</p>
+            </div>
+        </div>
+
+        <div class="lesson-detail" id="CTDL" style="display: none;">
+            <h3>Cấu Trúc Dữ Liệu</h3>
+            <div id="CTDL-lecture" style="display: none;">
+                <p>Bài 1: Algorithms_1</p>
+                <embed src="\pdf\3_ALGORITHMS_2.pdf" type="application/pdf" width="1000" height="500">
+                <p>Bài 2: Algorithms_2</p>
+                <embed src="\pdf\3_ALGORITHMS_2.pdf" type="application/pdf" width="1000" height="500">
+                <p>Bài 3: Algorithms_3</p>
+                <embed src="\pdf\3_ALGORITHMS_3.pdf" type="application/pdf" width="1000" height="500">
+            </div>
+            <div id="CTDL-exercises" style="display: none;">
+                <p>Bài tập 1: Thực hành đệ quy mở rộng thêm</p>
+                <embed src="pdf\ĐỆ QUY BÀI TẬP MỞ RỘNG.pdf" type="application/pdf" width="1000" height="500">
+                <p>Bài tập 2: Giải bài tập thuật toán tìm kiếm</p>
+            </div>
+            <div id="CTDL-references" style="display: none;">
+                <p>Tài liệu tham khảo: Sách Cấu Trúc Dữ Liệu của Adam Drozdek</p>
+            </div>
+        </div>
+
+        <div class="lesson-detail" id="GTNM" style="display: none;">
+            <h3>Giao tiếp Người Máy</h3>
+            <div id="GTNM-lecture" style="display: none;">
+                <p>Bài 1: Introduction</p>
+                <embed src="\pdf\Week 1 - Introduction.pdf" type="application/pdf" width="1000" height="500">
+                <p>Bài 2: History of Human-Robot Interaction</p>
+                <embed src="\pdf\Week 2 - History of HRI.pdf" type="application/pdf" width="1000" height="500">
+            </div>
+            <div id="GTNM-exercises" style="display: none;">
+                <p>Bài tập 1: Tình huống tương tác người-máy</p>
+            </div>
+            <div id="GTNM-references" style="display: none;">
+                <p>Tài liệu tham khảo: Sách Giao tiếp Người Máy của Sherry Turkle</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="jscript/h1.js"></script>
+</body>
+
+</html>

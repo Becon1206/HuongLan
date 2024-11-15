@@ -1,0 +1,263 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #D2E3C8;
+    color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#name {
+    display: flex;
+    align-items: center;
+}
+
+#name h2 {
+    font-family: Verdana, sans-serif;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #739072;
+}
+
+
+nav a.active {
+    background-color: #739072;
+}
+
+#home-tab,
+.exercise-tab {
+    padding: 20px;
+    display: none;
+    /* Ẩn các tab mặc định */
+}
+
+
+.tab-link.active+#home-tab,
+.tab-link.active+.exercise-tab {
+    display: block;
+}
+
+
+#home-tab {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* Container chính */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Phần lưới cho các tài liệu */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Thiết lập giao diện từng mục tài liệu */
+.material {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.material:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.material h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.view-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #45a049;
+}
+
+/* Phần hiển thị Lesson Content */
+.lesson-content {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* Ẩn Lesson Content ban đầu */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.lesson-content.visible {
+    display: block;
+    /* Hiển thị khi có lớp visible */
+    opacity: 1;
+    max-height: 1000px;
+    /* Cho phép mở rộng Lesson Content */
+}
+
+.lesson-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333;
+}
+
+/* Danh sách bài học */
+
+.lessons ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.lessons ul li {
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-left: 5px solid #4CAF50;
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.lessons ul li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Style cho từng Lesson Content */
+.lesson-content {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.lesson-content.visible {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.lesson-detail h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.lesson-detail p,
+.lesson-detail ul {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.lesson-detail a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.lesson-detail a:hover {
+    text-decoration: underline;
+}
+
+.lesson-detail pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lesson-detail ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+
+/* Responsive cho thiết bị di động */
+@media (max-width: 768px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-content h2 {
+        font-size: 24px;
+    }
+
+    .lesson-detail h3 {
+        font-size: 20px;
+    }
+
+    .lesson-detail p {
+        font-size: 14px;
+    }
+
+    .view-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
