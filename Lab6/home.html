@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog</title>
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+
+<body>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="filter">Web Development <span>13.3M+ learners</span></div>
+        <div class="filter">JavaScript <span>17.7M+ learners</span></div>
+        <div class="filter">React JS <span>7M+ learners</span></div>
+        <div class="filter">Angular <span>4M+ learners</span></div>
+        <div class="filter">Java <span>15.5M+ learners</span></div>
+        <div class="filter">Android Development <span>8M+ learners</span></div>
+        <div class="filter">iOS Development <span>4M+ learners</span></div>
+        <div class="filter">CSS <span>9M+ learners</span></div>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="course-section">
+        <!-- Course Card 1 -->
+        <div class="course-card" onmouseover="showInfo(1)" onmouseout="hideInfo(1)">
+            <img src="course1.jpg" alt="Course Image">
+            <div class="course-info">
+                <h3>The Complete 2024 Web Development Bootcamp</h3>
+                <p>Dr. Angela Yu, Developer and Lead Instructor</p>
+                <div class="rating">
+                    <span>4.7</span> ★★★★☆ (409,451)
+                </div>
+                <div class="price">₫1,699,000</div>
+                <div class="bestseller">Bestseller</div>
+            </div>
+            <div class="info-popup" id="info1">
+                <p><strong>The Complete 2024 Web Development Bootcamp</strong></p>
+                <p>Updated October 2024</p>
+                <p>74 total hours • All Levels • Subtitles</p>
+                <ul>
+                    <li>10 Hours of React just added</li>
+                    <li>The ins and outs of HTML5, CSS3, and JavaScript</li>
+                    <li>Make REAL web applications using cutting-edge technologies</li>
+                    <li>Create responsive, accessible, and beautiful layouts</li>
+                </ul>
+                <button>Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div class="course-card" onmouseover="showInfo(2)" onmouseout="hideInfo(2)">
+            <img src="course2.jpg" alt="Course Image">
+            <div class="course-info">
+                <h3>The Web Developer Bootcamp 2024</h3>
+                <p>Colt Steele</p>
+                <div class="rating">
+                    <span>4.7</span> ★★★★☆ (276,674)
+                </div>
+                <div class="price">₫2,399,000</div>
+            </div>
+            <div class="info-popup" id="info2">
+                <p><strong>The Web Developer Bootcamp 2024</strong></p>
+                <p>Updated October 2024</p>
+                <p>74 total hours • All Levels • Subtitles</p>
+                <ul>
+                    <li>10 Hours of React just added</li>
+                    <li>The ins and outs of HTML5, CSS3, and JavaScript</li>
+                    <li>Make REAL web applications using cutting-edge technologies</li>
+                    <li>Create responsive, accessible, and beautiful layouts</li>
+                </ul>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show All Button -->
+    <div class="show-all">
+        <button>Show all Web Development courses</button>
+    </div>
+
+    <script>
+        function showInfo(id) {
+            document.getElementById('info' + id).style.display = 'block';
+        }
+
+        function hideInfo(id) {
+            document.getElementById('info' + id).style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

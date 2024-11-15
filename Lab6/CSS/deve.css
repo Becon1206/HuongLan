@@ -1,0 +1,217 @@
+/* Tổng thể */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0px;
+    color: #333;
+}
+
+/* Định dạng cho các đoạn văn */
+p {
+    margin: 0;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #577D86;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2.2em;
+    /* Tăng kích thước logo */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    /* Tăng khoảng cách giữa các liên kết */
+    font-size: 1.3em;
+    /* Tăng kích thước chữ */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f8f9fa;
+    transform: translateY(-3px);
+}
+
+/* Tab Categories */
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.tab-acticve {
+    font-size: 16px;
+    padding: 12px 24px;
+    background-color: #E4E0E1;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+/* Hover hiệu ứng cho tab */
+.category-tabs button:hover {
+    background-color: #3C3D37;
+    color: #fff;
+    transform: scale(1.05);
+    /* Phóng to khi hover */
+}
+
+/* Courses Container */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 1.5rem;
+    padding: 20px;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #f5f5f5;
+    overflow-x: auto;
+    height: 600px;
+}
+
+/* Course Card */
+.course-card {
+    flex-shrink: 0;
+    /* Không thu nhỏ lại khi không gian thiếu */
+    width: 300px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* Thêm khoảng trống khi hover */
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Image */
+.course-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover hiệu ứng khi di chuột qua hình ảnh */
+.course-card:hover .course-image img {
+    transform: scale(1.1);
+}
+
+/* Course Details */
+.course-details {
+    padding: 10px 0;
+}
+
+.course-details h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.course-details p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Completion Info */
+.completion-info p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    background-color: #569DAA;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Show All Button */
+
+.show-all {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #87CBB9;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    width: fit-content;
+    margin-left: 0;
+
+}
+
+/* Hover hiệu ứng cho Show All Button */
+.show-all:hover {
+    background-color: #569DAA;
+    transform: scale(1.05);
+}
+
+/* Đảm bảo nút nằm ở cuối container */
+.courses-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 20px;
+    justify-content: center;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.courses-container .show-all {
+    position: absolute;
+    bottom: 20px;
+    left: 1rem;
+    margin-left: 0;
+}

@@ -1,0 +1,144 @@
+/* Tổng thể */
+html,
+body {
+    height: 100%;
+    /* Đảm bảo body và html có chiều cao đầy đủ */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Đảm bảo footer nằm ở dưới cùng */
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #577D86;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2.2em;
+    /* Tăng kích thước logo */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    /* Tăng khoảng cách giữa các liên kết */
+    font-size: 1.3em;
+    /* Tăng kích thước chữ */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f8f9fa;
+    transform: translateY(-3px);
+}
+
+/* Main content */
+main {
+    text-align: center;
+    padding: 200px;
+    /* Tăng padding để tạo không gian rộng rãi */
+    background-color: #fff;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+.box {
+    background-color: #3C3D37;
+    color: #fff;
+    padding: 20px 40px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 1.5em;
+    /* Tăng kích thước chữ */
+    font-weight: bold;
+    margin-bottom: 40px;
+    /* Tăng khoảng cách giữa box và nội dung dưới */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    font-size: 3em;
+    /* Tăng kích thước tiêu đề */
+    color: #343a40;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+main p {
+    font-size: 1.5em;
+    /* Tăng kích thước chữ */
+    color: #6c757d;
+    margin: 30px 0;
+    line-height: 1.8;
+    /* Tăng khoảng cách dòng */
+    font-weight: 400;
+}
+
+input[type="email"] {
+    padding: 15px;
+    font-size: 1.2em;
+    /* Tăng kích thước chữ */
+    width: 350px;
+    max-width: 90%;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="email"]:focus {
+    border: 2px solid #577D86;
+}
+
+button {
+    padding: 18px 40px;
+    /* Tăng kích thước nút */
+    font-size: 1.5em;
+    /* Tăng kích thước chữ */
+    background-color: #87CBB9;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #569DAA;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #577D86;
+    color: #fff;
+    font-size: 1em;
+    margin: 0px;
+    border-top: 1px solid #444;
+    width: auto;
+    flex-shrink: 0;
+}
